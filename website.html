@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mahli, will you be My Valentine?</title>
+  <link rel="icon" type="image/jpeg" href="catpicture.jpg">
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      background-color: #ffdde1;
+      margin-top: 100px;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 20px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 10px;
+      border: none;
+    }
+
+    #yesBtn {
+      background-color: #ff4d6d;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: #999;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+
+<img src="homepagephoto.gif" width="300" alt="Valentine GIF">
+
+<h1>Mahli, will you be my Valentine? 💖</h1>
+
+<button id="yesBtn" onclick="yesClicked()">Yes 💕</button>
+<button id="noBtn" onmouseover="moveButton()">No 😢</button>
+
+<script>
+  function moveButton() {
+    const button = document.getElementById("noBtn");
+    button.style.top = Math.random() * window.innerHeight + "px";
+    button.style.left = Math.random() * window.innerWidth + "px";
+  }
+
+  function yesClicked() {
+  document.body.innerHTML = `
+    <h1 style="font-size: 50px;">YAY!!! 💕 I luhhh you hoe 😍</h1>
+    <img src="catyay.gif" width="350" style="border-radius: 15px; margin-top: 20px;">
+  `;
+  document.body.style.backgroundColor = "#ff4d6d";
+}
+</script>
+
+</body>
+</html>
